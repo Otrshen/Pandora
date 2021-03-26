@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shenming.pandora.mapper.EmailMapper">
+    <resultMap id="result" type="com.shenming.pandora.pojo.Email">
+        <result property="msgUID" column="msgUID"/>
+        <result property="subject" column="subject"/>
+        <result property="emailAddress" column="emailAddress"/>
+    </resultMap>
+
+    <insert id="add" parameterType="com.shenming.pandora.pojo.Email">
+        insert into email(msgUID, subject, emailAddress) values(#{msgUID}, #{subject}, #{emailAddress})
+    </insert>
+
+    <select id="findByMsgUID" parameterType="String" resultMap="result">
+        select * from email where msgUID = #{msgUID}
+    </select>
+</mapper>

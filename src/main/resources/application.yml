@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 8886
+  servlet:
+    context-path: /pandora
+
+mybatis:
+  # 数据库配置文件
+  mapper-locations: classpath:mapper/*.xml
+
+# JPush推送
+jpush_app_key: 8142d27abeec4682ba00ecc0
+jpush_master_secret: 28a83af94c4a6bca757870bb
+
+# 公司邮件服务地址
+email_ip: http://117.107.197.44
+email_port: 80
