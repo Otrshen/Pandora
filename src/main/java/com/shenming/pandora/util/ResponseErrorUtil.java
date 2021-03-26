@@ -9,7 +9,7 @@ import com.shenming.pandora.util.exception.ClientException;
 /**
  * 网路请求返回工具类，转json,以及记录日志
  *
- * @author: 申铭
+ * @author: 申铭m
  * @create: 2021-03-23 17:16
  **/
 
