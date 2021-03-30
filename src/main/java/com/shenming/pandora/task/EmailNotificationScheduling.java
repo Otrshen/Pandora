@@ -30,7 +30,7 @@ public class EmailNotificationScheduling {
     * @Date: 2021/3/19
     */
 //    @Scheduled(cron = "0/5 * * * * ?")
-    @Scheduled(cron = "0 0/15 * * * ?")
+    @Scheduled(cron = "0 0/15 9,10,11,12,13,14,15,16,17,18 * * ?")
     public void getUnreadEmailAndPush() {
         // 获取所有订阅邮箱
         List<SubscribeEmail> emails = subscribeEmailService.queryAllSubscribeEmail();

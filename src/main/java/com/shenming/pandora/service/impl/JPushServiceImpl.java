@@ -65,7 +65,7 @@ public class JPushServiceImpl implements JPushService {
                                         .setTitleAndBody(title, null, body)
                                         .build())
                                 .setBadge(1)
-                                .setSound("happy")
+                                .setSound("aaao.caf")
                                 .addExtra("from", "JPush")
                                 .build())
                         .build())
