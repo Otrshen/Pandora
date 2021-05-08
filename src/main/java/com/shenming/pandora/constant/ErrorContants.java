@@ -15,6 +15,8 @@ public class ErrorContants {
     // 未知错误
     public static final String UNKNOWN = "-10000";
 
+    // 参数错误
+    public static final String PARAMETER_ERROR = "1001";
     // token失效
     public static final String ACCESSTOKEN_INVALID = "1450";
     // 已存该订阅人员

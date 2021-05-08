@@ -1,12 +1,8 @@
 package com.shenming.pandora.service;
 
-import com.shenming.pandora.domain.SubscribeEmail;
 import com.shenming.pandora.pojo.Email;
-import com.shenming.pandora.util.exception.ClientException;
 
 import java.util.ArrayList;
-import java.util.List;
-
 
 public interface EmailService {
 

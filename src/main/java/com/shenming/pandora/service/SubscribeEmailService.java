@@ -1,6 +1,6 @@
 package com.shenming.pandora.service;
 
-import com.shenming.pandora.domain.SubscribeEmail;
+import com.shenming.pandora.pojo.SubscribeEmail;
 import com.shenming.pandora.util.exception.ClientException;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public interface SubscribeEmailService {
     /**
      * @Description: 查询所有已订阅通知的邮箱
      * @Params: []
-     * @return: java.util.List<com.shenming.pandora.domain.SubscribeEmail>
+     * @return: java.util.List<com.shenming.pandora.pojo.SubscribeEmail>
      * @Author: 申铭
      * @Date: 2021/3/24
      */

@@ -1,6 +1,10 @@
 spring:
   profiles:
     active: dev
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
 
 server:
   port: 8886
@@ -18,3 +22,6 @@ jpush_master_secret: 28a83af94c4a6bca757870bb
 # 公司邮件服务地址
 email_ip: http://117.107.197.44
 email_port: 80
+
+# 图床上传路径
+imgbed_upload_path: /Users/shenming/Documents/PandoraImgBed/

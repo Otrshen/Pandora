@@ -1,12 +1,11 @@
 package com.shenming.pandora.task;
 
-import com.shenming.pandora.domain.SubscribeEmail;
+import com.shenming.pandora.pojo.SubscribeEmail;
 import com.shenming.pandora.pojo.Email;
 import com.shenming.pandora.service.EmailService;
 import com.shenming.pandora.service.JPushService;
 import com.shenming.pandora.service.SubscribeEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -23,14 +22,14 @@ public class EmailNotificationScheduling {
     private JPushService jPushService;
     
     /** 
-    * @Description: 定时任务
+    * @Description: 定时任务，已废弃
     * @Params: []
     * @return: void
     * @Author: 申铭
     * @Date: 2021/3/19
     */
 //    @Scheduled(cron = "0/5 * * * * ?")
-    @Scheduled(cron = "0 0/15 9,10,11,12,13,14,15,16,17,18 * * ?")
+//    @Scheduled(cron = "0 0/15 9,10,11,12,13,14,15,16,17,18 * * ?")
     public void getUnreadEmailAndPush() {
         // 获取所有订阅邮箱
         List<SubscribeEmail> emails = subscribeEmailService.queryAllSubscribeEmail();

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shenming.pandora.mapper.ImgBedMapper">
+    <resultMap id="result" type="com.shenming.pandora.pojo.ImgBed">
+        <result property="id" column="id"/>
+        <result property="type" column="type"/>
+        <result property="content" column="content"/>
+    </resultMap>
+
+    <insert id="addOrUpdate" parameterType="com.shenming.pandora.pojo.ImgBed">
+        <selectKey keyProperty="count" resultType="int" order="BEFORE">
+            select count(*) from imgbed where type = #{type}
+        </selectKey>
+        <if test="count > 0">
+            update imgbed
+            set  content = #{content}
+            where type = #{type}
+        </if>
+        <if test="count == 0">
+            insert into imgbed(type, content) values(#{type}, #{content})
+        </if>
+    </insert>
+
+    <select id="findByType" resultMap="result">
+        select * from imgbed where type = #{type}
+    </select>
+</mapper>

@@ -1,6 +1,6 @@
 package com.shenming.pandora.mapper;
 
-import com.shenming.pandora.domain.SubscribeEmail;
+import com.shenming.pandora.pojo.SubscribeEmail;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -22,7 +22,7 @@ public interface SubscribeEmailMapper {
     /**
     * @Description:  查询所有已订阅邮件人员
     * @Params: []
-    * @return: java.util.List<com.shenming.pandora.domain.SubscribeEmail>
+    * @return: java.util.List<com.shenming.pandora.pojo.SubscribeEmail>
     * @Author: 申铭
     * @Date: 2021/3/25
     */

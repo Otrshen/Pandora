@@ -23,7 +23,8 @@ public class AccessFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        if (req.getRequestURI().toLowerCase().contains("/swagger-ui") || req.getRequestURI().toLowerCase().contains("/api-docs")) {
+        if (req.getRequestURI().toLowerCase().contains("/swagger-ui") || req.getRequestURI().toLowerCase().contains("/api-docs")
+                || req.getRequestURI().toLowerCase().contains("/imgbed/config") || req.getRequestURI().toLowerCase().contains("/imgbed/setting")) {
             chain.doFilter(request, response);
         } else {
             String token = req.getHeader("AccessToken");

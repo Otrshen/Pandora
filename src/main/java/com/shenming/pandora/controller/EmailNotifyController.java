@@ -1,7 +1,7 @@
 package com.shenming.pandora.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.shenming.pandora.domain.SubscribeEmail;
+import com.shenming.pandora.pojo.SubscribeEmail;
 import com.shenming.pandora.model.ResponseEntity;
 import com.shenming.pandora.service.SubscribeEmailService;
 import com.shenming.pandora.util.ResponseErrorUtil;

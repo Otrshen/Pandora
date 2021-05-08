@@ -1,6 +1,6 @@
 package com.shenming.pandora.service.impl;
 
-import com.shenming.pandora.domain.SubscribeEmail;
+import com.shenming.pandora.pojo.SubscribeEmail;
 import com.shenming.pandora.mapper.SubscribeEmailMapper;
 import com.shenming.pandora.service.JPushService;
 import com.shenming.pandora.service.SubscribeEmailService;

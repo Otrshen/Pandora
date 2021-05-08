@@ -1,4 +1,6 @@
-package com.shenming.pandora.pojo;
+package com.shenming.pandora.model;
+
+import com.shenming.pandora.pojo.Email;
 
 import java.io.Serializable;
 import java.util.ArrayList;

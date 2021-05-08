@@ -1,4 +1,4 @@
-package com.shenming.pandora.domain;
+package com.shenming.pandora.pojo;
 
 /**
  * 订阅的邮箱

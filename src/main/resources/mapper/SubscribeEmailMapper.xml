@@ -4,12 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.shenming.pandora.mapper.SubscribeEmailMapper">
-    <resultMap id="result" type="com.shenming.pandora.domain.SubscribeEmail">
+    <resultMap id="result" type="com.shenming.pandora.pojo.SubscribeEmail">
         <result property="id" column="id"/>
         <result property="emailAddress" column="email"/>
     </resultMap>
 
-    <insert id="add" parameterType="com.shenming.pandora.domain.SubscribeEmail">
+    <insert id="add" parameterType="com.shenming.pandora.pojo.SubscribeEmail">
         insert into subscribe_email(email) values(#{emailAddress})
     </insert>
 
@@ -17,7 +17,7 @@
         select * from subscribe_email
     </select>
 
-    <select id="findByEmail" parameterType="com.shenming.pandora.domain.SubscribeEmail" resultMap="result">
+    <select id="findByEmail" parameterType="com.shenming.pandora.pojo.SubscribeEmail" resultMap="result">
         select * from subscribe_email where email = #{emailAddress}
     </select>
 </mapper>

@@ -3,7 +3,7 @@ package com.shenming.pandora.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.shenming.pandora.mapper.EmailMapper;
 import com.shenming.pandora.pojo.Email;
-import com.shenming.pandora.pojo.EmailRes;
+import com.shenming.pandora.model.EmailRes;
 import com.shenming.pandora.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
