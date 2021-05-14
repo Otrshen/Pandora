@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.shenming</groupId>
     <artifactId>pandora</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <packaging>war</packaging>
     <name>Pandora</name>
     <description>潘多拉魔盒</description>

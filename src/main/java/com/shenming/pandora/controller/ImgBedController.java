@@ -56,11 +56,13 @@ public class ImgBedController {
     @GetMapping(value = "/config/gitee")
     public String config(Model m) {
         ImgBed imgBed = imgBedService.findByType(1);
-        GiteeImgBed giteeImgBed = JSON.parseObject(imgBed.getContent(), GiteeImgBed.class);
-        m.addAttribute("owner", giteeImgBed.getOwner());
-        m.addAttribute("repo", giteeImgBed.getRepo());
-        m.addAttribute("path", giteeImgBed.getPath());
-        m.addAttribute("token", giteeImgBed.getToken());
+        if (imgBed != null) {
+            GiteeImgBed giteeImgBed = JSON.parseObject(imgBed.getContent(), GiteeImgBed.class);
+            m.addAttribute("owner", giteeImgBed.getOwner());
+            m.addAttribute("repo", giteeImgBed.getRepo());
+            m.addAttribute("path", giteeImgBed.getPath());
+            m.addAttribute("token", giteeImgBed.getToken());
+        }
         return "ImgBedConfig";
     }
 
